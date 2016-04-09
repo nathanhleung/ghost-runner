@@ -2,7 +2,7 @@
 
 /* global angular */
 
-angular.module('ghostApp', ['ionic', 'ngCordova', 'ghostApp.home']).config(config);
+angular.module('ghostApp', ['ionic', 'ngCordova', 'ghostApp.home', 'ghostApp.pace']).config(config);
 
 function config($stateProvider, $urlRouterProvider) {
   $stateProvider.state('landing', {
@@ -16,7 +16,8 @@ function config($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/run.html'
   }).state('pace', {
     url: '/pace',
-    templateUrl: 'templates/pace.html'
+    templateUrl: 'templates/pace.html',
+    controller: 'PaceCtrl as vm'
   }).state('route', {
     url: '/route',
     templateUrl: 'templates/route.html'
@@ -38,3 +39,19 @@ function config($stateProvider, $urlRouterProvider) {
 angular.module('ghostApp.home', []).controller('HomeCtrl', HomeCtrl);
 
 function HomeCtrl() {}
+'use strict';
+
+angular.module('ghostApp.pace', []).controller('PaceCtrl', PaceCtrl);
+
+function PaceCtrl() {
+  // Actual pace = 600 - this.pace
+  this.pace = 600 - 300;
+  this.getTimeString = function (pace) {
+    var minutes = Math.floor(pace / 60).toString();
+    var seconds = (pace % 60).toString();
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
+    return minutes + ':' + seconds;
+  };
+}

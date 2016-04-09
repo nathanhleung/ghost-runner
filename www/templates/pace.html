@@ -1,1 +1,1 @@
-<ion-view view-title="Pace"><ion-content class="padding"><h1 class="text-center">Set Pace</h1><div class="text-center"><p>5:00</p></div></ion-content></ion-view>
+<ion-view view-title="Pace"><ion-content class="padding"><h1 class="text-center">Set Pace</h1><div class="item range"><i class="icon ion-ios-bolt-outline"></i><input type="range" min="0" max="360" ng-model="vm.pace"/><i class="icon ion-ios-bolt"></i></div><br/><div class="text-center"><h2>{{ vm.getTimeString(600 - vm.pace) }} per mile</h2></div></ion-content></ion-view>

@@ -4,6 +4,7 @@ angular.module('ghostApp', [
   'ionic',
   'ngCordova',
   'ghostApp.home',
+  'ghostApp.pace',
 ])
   .config(config);
 
@@ -21,7 +22,8 @@ function config($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/run.html'
     }).state('pace', {
       url: '/pace',
-      templateUrl: 'templates/pace.html'
+      templateUrl: 'templates/pace.html',
+      controller: 'PaceCtrl as vm'
     }).state('route', {
       url: '/route',
       templateUrl: 'templates/route.html'

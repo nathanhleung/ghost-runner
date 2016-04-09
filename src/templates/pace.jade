@@ -1,5 +1,10 @@
 ion-view(view-title="Pace")
   ion-content.padding
     h1.text-center Set Pace
+    .item.range
+      i.icon.ion-ios-bolt-outline
+      input(type='range' min='0' max='360' ng-model='vm.pace')
+      i.icon.ion-ios-bolt
+    br
     .text-center
-      p 5:00
+      h2 {{ vm.getTimeString(600 - vm.pace) }} per mile

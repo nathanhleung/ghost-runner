@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
+
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400')
+    link(rel="stylesheet" href="css/ionic.app.css")
+
+    //- ionic/angularjs js
+    script(src="lib/vendor/ionic/js/ionic.bundle.js")
+
+    //- ngCordova
+    script(src="lib/vendor/ngCordova/dist/ng-cordova.min.js")
+
+    //- cordova script (this will be a 404 during development)
+    script(src="cordova.js")
+
+    //- your app's js
+    script(src='js/combined.js')
+  body(ng-app="ghostApp")
+    ion-nav-bar.bar-positive
+      ion-nav-back-button.button-icon.ion-arrow-left-c
+    ion-nav-view

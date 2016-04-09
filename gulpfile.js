@@ -53,9 +53,7 @@ gulp.task('babel', function(done) {
       esversion: 6
     }))
     .pipe(jshint.reporter('default'))
-    .pipe(babel({
-      presets: ['es2015']
-    }))
+    .pipe(babel())
     .pipe(concat('combined.js'))
     .pipe(gulp.dest('./www/js'))
     .on('end', done);
