@@ -22,3 +22,11 @@ $ionicons-font-path: "../lib/vendor/ionic/fonts" !default;
 @import "../lib/vendor/ionic/scss/ionic";
 
 @import "utility";
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Lato;
+}
+
+ion-view#landing {
+  background: lighten(#387ef5, 35%);
+}

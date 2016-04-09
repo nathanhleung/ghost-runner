@@ -1,20 +1,40 @@
 'use strict';
 
-angular.module('myApp', ['ionic', 'ngCordova', 'myApp.HomeCtrl']).config(config).run(init);
+/* global angular */
+
+angular.module('ghostApp', ['ionic', 'ngCordova', 'ghostApp.home']).config(config);
 
 function config($stateProvider, $urlRouterProvider) {
-  $stateProvider.state('index', {
+  $stateProvider.state('landing', {
     url: '/',
-    templateUrl: 'templates/home.html',
-    controller: 'HomeCtrl as vm'
+    templateUrl: 'templates/landing.html'
+  }).state('home', {
+    url: '/home',
+    templateUrl: 'templates/home.html'
+  }).state('run', {
+    url: '/run',
+    templateUrl: 'templates/run.html'
+  }).state('pace', {
+    url: '/pace',
+    templateUrl: 'templates/pace.html'
+  }).state('route', {
+    url: '/route',
+    templateUrl: 'templates/route.html'
+  }).state('music', {
+    url: '/music',
+    templateUrl: 'templates/music.html'
+  }).state('find', {
+    url: '/find',
+    templateUrl: 'templates/find.html'
+  }).state('settings', {
+    url: '/settings',
+    templateUrl: 'templates/settings.html'
   });
 
   $urlRouterProvider.otherwise('/');
 }
-
-function init() {}
 'use strict';
 
-angular.module('myApp.HomeCtrl', []).controller('HomeCtrl', HomeCtrl);
+angular.module('ghostApp.home', []).controller('HomeCtrl', HomeCtrl);
 
 function HomeCtrl() {}

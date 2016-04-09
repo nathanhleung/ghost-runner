@@ -6851,9 +6851,8 @@ button.item.item-button-right {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex: 0 0 auto;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 100%;
   height: 100%;
   position: relative; }
@@ -9684,3 +9683,23 @@ a.button {
 /**
  * Utility styles
  */
+.flex-center-fullscreen {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Lato; }
+
+ion-view#landing {
+  background: #e2ecfe; }
